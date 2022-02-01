@@ -1,0 +1,22 @@
+name: May test workflow
+description: lorem ipsum dolor sit ahmet
+
+maintainer: Anthony-Jhoiro
+
+parameters:
+  name:
+    type: string
+
+
+---
+
+workflow:
+  steps:
+    - name: Say hi
+      image: alpine:3.15
+      workdir: /app
+      commands: |
+        echo "Hello {{ index .Parameters "name" }}"
+
+
+
