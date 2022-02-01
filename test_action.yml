@@ -13,7 +13,7 @@ parameters:
 workflow:
   steps:
     - name: Say hi
-      image: alpine:3.15
+      image: alpine:3.15.0
       workdir: /app
       commands: |
         echo "Hello {{ index .Parameters "name" }}"
